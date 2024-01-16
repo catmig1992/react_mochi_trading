@@ -1,11 +1,19 @@
+require("dotenv").config();
+
 const express = require("express");
 
 const app = express();
 
 app.get("/", function (req, res) {
-  res.send("Hello Mochi-Trading!");
+  res.send(`
+    <body style="margin:0">
+      <div style="border:1px solid black; height:10vh; background-color:seashell">
+        <h1 style="text-align:center; color:thistle">Hello Mochi-Trading!</h1>
+      </div>
+    </body>
+  `);
 });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT, function () {
   console.log("Ready!");
 });
