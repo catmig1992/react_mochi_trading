@@ -1,9 +1,11 @@
-let http = require("http");
-let server = http.createServer(function (req, res) {
-  res.write("<h1 style='color: violet'>Hello Mochi Trading!</h1>");
-  res.end();
+const express = require("express");
+
+const app = express();
+
+app.get("/", function (req, res) {
+  res.send("Hello Mochi-Trading!");
 });
 
-server.listen(3000, function () {
+app.listen(3000, function () {
   console.log("Ready!");
 });
