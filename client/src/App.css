@@ -1,38 +1,210 @@
+* {
+  outline: 1px solid red;
+}
+
+/********************
+GENERAL
+********************/
+
 .App {
+  margin: 0;
+  padding: 0;
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(191, 192, 223, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/********************
+HEADER
+********************/
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url("../public/images/pexels-karolina-grabowska-5725894-cropped.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 8vh;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
+  position: fixed;
+  top: 0;
+}
+
+.App-title {
+  margin: 0;
+  padding: 40px 0px 60px 0px;
+  font-size: 26px;
+  font-weight: 700;
+  color: midnightblue;
+}
+
+/********************
+NAV
+********************/
+
+.App-nav {
+  background-color: #c3c4e3;
+  margin: 90px 0px 0px 0px;
+  padding: 0px;
+  width: 100%;
+  min-height: 7.5vh;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+  position: fixed;
+}
+
+ul {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+}
+
+li {
+  margin: 0px 15px;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Link */
+a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a:link {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* select{
+  border-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #c3c4e3;
+  color: white;
+} */
+
+/********************
+MAIN
+********************/
+
+.homePage {
+  margin: 150px 0px 150px 0px;
+  padding: 1.5px 0px;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+}
+
+.section-title {
+  background-color: rgb(191, 192, 223, 0.85);
+}
+
+.default-img {
+  background-color: rgb(191, 192, 223, 0.85);
+  width: 50vw;
+}
+
+.aboutPage,
+.categoryPage,
+.storePage,
+.eventPage {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(191, 192, 223, 0.85);
+  position: static;
+}
+
+.aboutHeader,
+.categoryHeader,
+.storeHeader,
+.eventHeader {
+  margin: 0;
+  padding: 0px 0px 20px 0px;
+  color: white;
+  font-size: 28px;
+}
+
+.aboutContext {
+  margin: 0;
+  padding: 15px 150px;
+  text-align: center;
+  color: white;
+}
+
+/********************
+FOOTER
+********************/
+
+.App-footer {
+  background-color: #aca6ce;
+  margin: 0;
+  padding: 15px 30px;
+  width: 100%;
+  min-height: 2vh;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+/********************
+MEDIA QUERY
+********************/
+
+@media (min-width: 600px) {
+  .App {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+  .App-header,
+  .App-nav,
+  .App-main,
+  .App-footer {
+    width: 100%;
+  }
+
+  .App-header {
+    height: 12vh;
+  }
+  .App-footer {
+    height: 18vh;
   }
 }
