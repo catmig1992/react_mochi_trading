@@ -49,9 +49,9 @@ function App() {
       </Router>
 
       <footer className="App-footer">
-        <p>Facebook</p>
-        <p>Instagram</p>
-        <p>Ebay</p>
+        <p className="footer-info">Facebook</p>
+        <p className="footer-info">Instagram</p>
+        <p className="footer-info">Ebay</p>
       </footer>
     </div>
   );
