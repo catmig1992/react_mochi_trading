@@ -1,8 +1,14 @@
-require("dotenv").config();
-
+/*****DEPENDENCIES*****/
 const express = require("express");
 
+/*****CONFIGURATION*****/
+require("dotenv").config();
+const PORT = process.env.PORT;
 const app = express();
+
+/*****MIDDLEWARE*****/
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
   res.send(`
@@ -24,6 +30,6 @@ app.get("*", (req, res) => {
   `);
 });
 
-app.listen(process.env.PORT, function () {
+app.listen(PORT, function () {
   console.log("Ready!");
 });
