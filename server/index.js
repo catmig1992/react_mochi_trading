@@ -7,9 +7,10 @@ const PORT = process.env.PORT;
 const app = express();
 
 /*****MIDDLEWARE*****/
-app.use(express.static("public"));
+// app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
+/*****ROUTES*****/
 app.get("/", function (req, res) {
   res.send(`
     <body style="margin:0">
