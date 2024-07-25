@@ -8,7 +8,7 @@ const app = express();
 
 /*****MIDDLEWARE*****/
 // app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
 
 /*****ROUTES*****/
 app.get("/", function (req, res) {
@@ -20,6 +20,10 @@ app.get("/", function (req, res) {
     </body>
   `);
 });
+
+/***EVENTS***/
+const eventsController = require("./controllers/events_controller.js");
+app.use("/events", eventsController);
 
 app.get("*", (req, res) => {
   res.status(404).send(`
