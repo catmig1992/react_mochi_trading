@@ -4,11 +4,15 @@ const express = require("express");
 /*****CONFIGURATION*****/
 require("dotenv").config();
 const PORT = process.env.PORT;
+const cors = require("cors");
 const app = express();
 
 /*****MIDDLEWARE*****/
-// app.use(express.static("public"));
-// app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+
+// Need to use Client-Side Rendering for the View via app.use();
+// app.use("/api/v1", eachRouter);
+// app.use("http://localhost:3001/api/v1");
 
 /*****ROUTES*****/
 app.get("/", function (req, res) {

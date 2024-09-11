@@ -1,6 +1,6 @@
 const express = require("express");
 const events = express.Router();
-const Event = require("../models/event.js");
+const Event = require("../models/event_seed.js");
 
 // INDEX ROUTE
 events.get("/", (req, res) => {

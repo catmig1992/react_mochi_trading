@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
 
 /********************
 GENERAL
@@ -155,15 +155,20 @@ MAIN
 .categoryHeader,
 .storeHeader,
 .eventHeader {
-  margin: 0;
   padding: 0px 0px 20px 0px;
   color: white;
   font-size: 28px;
 }
 
+.categoryHeader,
+.storeHeader,
+.eventHeader {
+  margin: 0px 0px 800px 0px;
+}
+
 .aboutContext {
   margin: 0;
-  padding: 15px 150px;
+  padding: 0px 150px 600px 150px;
   text-align: center;
   color: white;
 }

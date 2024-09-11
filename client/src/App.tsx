@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+// import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
@@ -9,6 +10,25 @@ import Event from "./components/Event";
 import About from "./components/About";
 
 function App() {
+  // let [name, setName] = useState("club A");
+  // let [data, setData] = useState({});
+  // let [event, setEvent] = useState(1);
+
+  // useEffect(() => {
+  //   // document.title = `Hello, ${name}`;
+  //   fetch("/api/v1/${event}")
+  //     .then((response) => response.json())
+  //     .then((resData) => setData(resData));
+  // }, [event]);
+
+  // const [events, setEvents] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:3001/api/v1/events")
+  //     .then((response) => response.json())
+  //     .then((resData) => setEvents(resData));
+  // }, [events]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -30,7 +50,7 @@ function App() {
               <Link to="/online-store">Online Store</Link>
             </li>
             <li>
-              <Link to="/upcoming-events">Upcoming Events</Link>
+              <Link to="/upcoming-events">Events</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
